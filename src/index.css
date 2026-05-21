@@ -1,0 +1,668 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+/* =========================
+   EDITORIAL PREMIUM HERO
+========================= */
+
+.premium-hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:120px 7%;
+
+    position:relative;
+    overflow:hidden;
+
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+}
+
+/* SOFT LUXURY OVERLAY */
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(247,241,235,0.82) 0%,
+    rgba(239,227,216,0.70) 45%,
+    rgba(234,215,202,0.65) 100%);
+
+    z-index:1;
+}
+
+/* SIDE IMAGES */
+
+.side-image{
+
+    position:relative;
+
+    width:28%;
+    height:90vh;
+
+    z-index:2;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+}
+
+/* REMOVE CARD LOOK COMPLETELY */
+
+.side-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    object-position:bottom center;
+
+    background:transparent !important;
+
+    border:none !important;
+    border-radius:0 !important;
+
+    box-shadow:none !important;
+
+    filter:
+    brightness(1.02)
+    contrast(1.02);
+
+    mix-blend-mode:normal;
+
+    opacity:0.98;
+
+    display:block;
+}
+
+/* EDITORIAL POSITIONING */
+
+.left-image{
+    transform:translateY(50px);
+}
+
+.right-image{
+    transform:translateY(-35px);
+}
+
+/* CENTER CONTENT */
+
+.hero-content{
+
+    width:38%;
+
+    position:relative;
+    z-index:3;
+
+    text-align:center;
+}
+
+/* TAG */
+
+.hero-tag{
+
+    display:inline-block;
+
+    font-size:13px;
+    letter-spacing:5px;
+
+    color:#b67d69;
+
+    font-family:'Poppins',sans-serif;
+
+    text-transform:uppercase;
+}
+
+/* HEADING */
+
+.hero-content h1{
+
+    margin-top:24px;
+
+    font-size:92px;
+    line-height:0.88;
+
+    color:#2d1d18;
+
+    font-family:'Playfair Display',serif;
+    font-weight:600;
+}
+
+.hero-content h1 span{
+
+    display:block;
+
+    color:#c8846b;
+}
+
+/* PARAGRAPH */
+
+.hero-content p{
+
+    margin-top:30px;
+
+    font-size:18px;
+    line-height:1.9;
+
+    color:#5d4d45;
+
+    font-family:'Poppins',sans-serif;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+
+    margin-top:42px;
+}
+
+.primary-btn{
+
+    padding:17px 38px;
+
+    border:none;
+    border-radius:50px;
+
+    background:#c98267;
+
+    color:white;
+
+    font-size:14px;
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:0.4s ease;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#b26e55;
+}
+
+.secondary-btn{
+
+    padding:17px 38px;
+
+    border-radius:50px;
+
+    border:1px solid #caa895;
+
+    background:transparent;
+
+    color:#7b5e53;
+
+    cursor:pointer;
+
+    transition:0.4s ease;
+}
+
+.secondary-btn:hover{
+
+    background:white;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+.premium-hero{
+
+    flex-direction:column;
+
+    padding:120px 6% 90px;
+}
+
+.hero-content{
+
+    width:100%;
+
+    margin:50px 0;
+}
+
+.side-image{
+
+    width:80%;
+    height:70vh;
+}
+
+.hero-content h1{
+
+    font-size:60px;
+}
+
+}
+
+@media(max-width:576px){
+
+.side-image{
+
+    width:100%;
+    height:55vh;
+}
+
+.hero-content h1{
+
+    font-size:44px;
+}
+
+.hero-content p{
+
+    font-size:16px;
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+}
+
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-bone text-onyx font-sans;
+    background-image:
+      radial-gradient(at 12% 6%, rgba(245, 213, 209, 0.55) 0px, transparent 45%),
+      radial-gradient(at 92% 82%, rgba(238, 184, 178, 0.30) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+  ::selection { background: #D17B77; color: #FBF7F6; }
+  ::-webkit-scrollbar { width: 11px; }
+  ::-webkit-scrollbar-track { background: #F8F2F0; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #EEB8B2, #B97058);
+    border-radius: 999px;
+    border: 2px solid #F8F2F0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #D17B77, #964846);
+  }
+}
+
+@layer components {
+  /* ── Decorative rules ──────────────────────────────────────── */
+  .rosegold-rule {
+    @apply inline-block w-12 h-px align-middle;
+    background: linear-gradient(90deg, transparent, #B97058 50%, transparent);
+  }
+  .rosegold-rule-long {
+    @apply inline-block w-20 h-px align-middle;
+    background: linear-gradient(90deg, transparent, #B97058 50%, transparent);
+  }
+  .rosegold-rule-light {
+    @apply inline-block w-12 h-px align-middle;
+    background: linear-gradient(90deg, transparent, #DBA38D 50%, transparent);
+  }
+  .blush-rule { @apply inline-block w-12 h-px bg-blush-500 align-middle; }
+
+  /* ── Buttons ──────────────────────────────────────────────── */
+  .btn-luxury {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4
+           font-sans text-[0.7rem] uppercase tracking-luxury font-medium
+           transition-all duration-500 ease-out;
+  }
+  .btn-luxury-primary {
+    @apply btn-luxury bg-onyx text-bone border border-onyx
+           hover:bg-transparent hover:text-onyx hover:shadow-onyx;
+  }
+  .btn-luxury-outline {
+    @apply btn-luxury bg-transparent text-onyx border border-onyx/30
+           hover:border-onyx hover:bg-onyx hover:text-bone;
+  }
+  .btn-luxury-blush {
+    @apply btn-luxury text-onyx-900 border border-blush-400 relative overflow-hidden;
+    background: linear-gradient(135deg, #FAE8E6 0%, #F5D5D1 50%, #EEB8B2 100%);
+  }
+  .btn-luxury-blush:hover {
+    box-shadow: 0 0 0 1px #D17B77, 0 0 50px -10px rgba(209, 123, 119, 0.6);
+    background: linear-gradient(135deg, #F5D5D1 0%, #EEB8B2 50%, #E29892 100%);
+  }
+  .btn-luxury-rosegold {
+    @apply btn-luxury text-onyx-900 border border-rosegold-400 relative overflow-hidden;
+    background: linear-gradient(135deg, #F4DDD2 0%, #E9C0AF 50%, #DBA38D 100%);
+  }
+  .btn-luxury-rosegold:hover {
+    box-shadow: 0 0 0 1px #B97058, 0 0 50px -10px rgba(185, 112, 88, 0.55);
+    background: linear-gradient(135deg, #E9C0AF 0%, #DBA38D 50%, #CC8A72 100%);
+  }
+  .btn-luxury-ghost-light {
+    @apply btn-luxury text-bone border border-bone/30 hover:bg-bone hover:text-onyx hover:border-bone;
+  }
+  .btn-luxury-ghost-dark {
+    @apply btn-luxury text-bone border border-blush-300/40 hover:bg-blush-400 hover:text-onyx-900 hover:border-blush-400;
+  }
+
+  /* ── Eyebrow labels ───────────────────────────────────────── */
+  .eyebrow {
+    @apply font-sans text-[0.7rem] uppercase tracking-editorial text-rosegold-600 font-medium;
+  }
+  .eyebrow-light {
+    @apply font-sans text-[0.7rem] uppercase tracking-editorial text-blush-300 font-medium;
+  }
+  .eyebrow-onyx {
+    @apply font-sans text-[0.7rem] uppercase tracking-editorial text-onyx/55 font-medium;
+  }
+
+  /* ── Glass cards ──────────────────────────────────────────── */
+  .glass-card {
+    background: rgba(248, 242, 240, 0.55);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    @apply border border-white/45 shadow-onyx;
+  }
+  .glass-card-dark {
+    background: rgba(14, 6, 6, 0.55);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    @apply border border-blush-300/15 shadow-onyx;
+  }
+
+  .section { @apply px-6 md:px-12 lg:px-20 py-24 md:py-32; }
+
+  /* ── Image treatments ─────────────────────────────────────── */
+  .img-zoom { @apply overflow-hidden; }
+  .img-zoom img { @apply transition-transform duration-[1400ms] ease-out; }
+  .img-zoom:hover img { transform: scale(1.06); }
+
+  /* ── Rose-gold shimmer text ───────────────────────────────── */
+  .rosegold-shimmer {
+    background: linear-gradient(90deg, #964846 0%, #B97058 22%, #DBA38D 45%, #F4DDD2 50%, #DBA38D 55%, #B97058 78%, #964846 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  .blush-text {
+    background: linear-gradient(135deg, #B85E5C 0%, #D17B77 50%, #EEB8B2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .blush-text-light {
+    background: linear-gradient(135deg, #FAE8E6 0%, #EEB8B2 45%, #D17B77 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .couture-italic {
+    @apply font-italiana font-normal;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── Form inputs ──────────────────────────────────────────── */
+  .input-luxury {
+    @apply w-full bg-transparent border-b border-onyx/15 focus:border-blush-500
+           outline-none py-3 font-light text-onyx transition-colors duration-300
+           placeholder:text-onyx/30;
+  }
+}
+
+/* ── Utilities ───────────────────────────────────────────────── */
+.deco-num { user-select: none; font-feature-settings: 'lnum'; }
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+/* ---------- Premium Luxury Improvements ---------- */
+
+section{
+  padding-top:110px;
+  padding-bottom:110px;
+}
+
+img{
+  image-rendering:auto;
+}
+
+.treatment-card img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:24px;
+}
+
+.before-after-track{
+  gap:18px;
+}
+
+.before-after img{
+  width:240px;
+  height:320px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+@media(max-width:768px){
+
+  section{
+    padding-top:80px;
+    padding-bottom:80px;
+  }
+
+}
+
+
+/* ---- Updated Hero & Results Premium Fix ---- */
+
+.hero-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.before-after img{
+  width:320px;
+  height:430px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+.before-after-track{
+  gap:28px;
+}
+
+
+
+/* ---------- 100% Luxury Premium Clinic Upgrade ---------- */
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#faf7f3;
+  color:#222;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:'Playfair Display',serif;
+  letter-spacing:0.3px;
+}
+
+section{
+  padding-top:120px;
+  padding-bottom:120px;
+}
+
+img{
+  image-rendering:auto;
+}
+
+.treatment-card{
+  overflow:hidden;
+  border-radius:26px;
+  background:#fff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.treatment-card img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:26px;
+  transition:transform .7s ease;
+}
+
+.treatment-card img:hover{
+  transform:scale(1.03);
+}
+
+.before-after-track{
+  gap:28px;
+}
+
+.before-after img{
+  width:320px;
+  height:430px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+.hero-premium-overlay{
+  background:linear-gradient(to right,#f8f4ef 0%,#ffffff 100%);
+}
+
+
+
+/* ===== FINAL PREMIUM LUXURY IMPROVEMENTS ===== */
+
+body{
+  background:#f7f0ea;
+}
+
+.hero-section{
+  min-height:100vh;
+}
+
+.hero-section h1{
+  font-size:92px;
+  line-height:0.95;
+  color:#2b1e1a;
+  font-family:'Playfair Display',serif;
+  font-weight:600;
+}
+
+.hero-section p{
+  color:#5b4b44;
+  font-size:19px;
+  line-height:1.8;
+}
+
+.hero-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:0;
+}
+
+/* BEFORE AFTER LARGE LUXURY STYLE */
+
+.before-after-track{
+  gap:34px;
+}
+
+.before-after img{
+  width:420px;
+  height:520px;
+  object-fit:cover;
+  border-radius:26px;
+  box-shadow:0 18px 45px rgba(0,0,0,0.08);
+}
+
+/* TREATMENT CARDS */
+
+.treatment-card{
+  border-radius:28px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 10px 35px rgba(0,0,0,0.05);
+}
+
+.treatment-card img{
+  height:420px;
+  width:100%;
+  object-fit:cover;
+  border-radius:28px;
+}
+
+/* Elegant buttons */
+
+button,
+.btn-primary{
+  border-radius:50px;
+  letter-spacing:1px;
+}
+
+/* More luxury spacing */
+
+section{
+  padding-top:130px;
+  padding-bottom:130px;
+}
+
+@media(max-width:768px){
+
+.hero-section h1{
+  font-size:52px;
+}
+
+.before-after img{
+  width:300px;
+  height:400px;
+}
+
+}

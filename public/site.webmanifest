@@ -1,0 +1,25 @@
+{
+  "name": "Fillers Clinic",
+  "short_name": "Fillers Clinic",
+  "description": "Premium aesthetic clinic in Newcastle upon Tyne. Lip, cheek, jawline, tear trough and chin fillers.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F8F2F0",
+  "theme_color": "#0E0606",
+  "lang": "en-GB",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "any"
+    }
+  ]
+}
