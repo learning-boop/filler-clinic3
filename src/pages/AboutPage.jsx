@@ -7,9 +7,9 @@ import { physicianSchema, breadcrumbSchema } from '../seo/schemas';
 
 const stats = [
   { n: '9+', label: 'Years in medicine' },
-  { n: 'GMC', label: 'Registered doctor' },
-  { n: 'CQC', label: 'Regulated clinic' },
-  { n: 'MRCGP', label: 'Royal College member' },
+  { n: '2800 +', label: 'Happy Patients' },
+  { n: '98%', label: 'operations Successful' },
+  { n: '4', label: 'Medical Qualifications' },
 ];
 
 const accreditations = [
@@ -251,7 +251,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTABanner />
+      {/* <CTABanner /> */}
     </>
   );
 }

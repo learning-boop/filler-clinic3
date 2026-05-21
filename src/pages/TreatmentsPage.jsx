@@ -302,7 +302,7 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
-      <CTABanner />
+      {/* <CTABanner /> */}
     </>
   );
 }

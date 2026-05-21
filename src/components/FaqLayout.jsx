@@ -298,7 +298,7 @@ export default function FaqLayout({
         </div>
       </section>
 
-      <CTABanner />
+      {/* <CTABanner /> */}
     </>
   );
 }

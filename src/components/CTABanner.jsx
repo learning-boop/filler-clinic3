@@ -75,15 +75,16 @@ export default function CTABanner() {
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-luxury-blush group">
+            <Link to="https://portal.aestheticnursesoftware.com/book-online/1150" className="btn-luxury-blush group">
               Book Consultation
               <ArrowRight
                 size={14}
                 className="transition-transform duration-500 group-hover:translate-x-1.5"
               />
             </Link>
-            <a href="tel:+441912000000" className="btn-luxury-ghost-light">
-              +44 (0)191 200 0000
+            <a href="tel:0333 444 1399" className="btn-luxury-ghost-light">
+0333 444 1399
+
             </a>
           </div>
         </motion.div>

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MoveHorizontal } from 'lucide-react';
@@ -37,15 +37,98 @@ function GoldBracket({ className, rotate = 0 }) {
   );
 }
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
+  }, []);
+  return isMobile;
+}
+
 function BeforeAfter({ before, after, treatment, note, index }) {
   const [pos, setPos] = useState(50);
   const cardRef = useRef(null);
+  const isMobile = useIsMobile();
 
   const onMove = (clientX) => {
     const r = cardRef.current?.getBoundingClientRect();
     if (!r) return;
     setPos(Math.max(4, Math.min(96, ((clientX - r.left) / r.width) * 100)));
   };
+
+  // ── Mobile: side-by-side static layout
+  if (isMobile) {
+    return (
+      <div className="group">
+        <div className="grid grid-cols-2 gap-2">
+          {/* Before */}
+          <div className="relative overflow-hidden rounded-xl">
+            <img
+              src={before}
+              alt={`${treatment} — before treatment at Fillers Clinic Newcastle`}
+              className="w-full h-52 object-cover object-center"
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+            <div
+              className="absolute top-2 left-2 text-[0.55rem] uppercase tracking-luxury font-medium text-bone px-2.5 py-1"
+              style={{
+                background: 'rgba(14,6,6,0.65)',
+                border: '1px solid rgba(219,163,141,0.22)',
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
+              }}
+            >
+              Before
+            </div>
+            <GoldBracket className="absolute top-1.5 left-1.5 w-5 h-5 pointer-events-none" rotate={0} />
+            <GoldBracket className="absolute bottom-1.5 left-1.5 w-5 h-5 pointer-events-none" rotate={270} />
+          </div>
+
+          {/* After */}
+          <div className="relative overflow-hidden rounded-xl">
+            <img
+              src={after}
+              alt={`${treatment} — after treatment result at Fillers Clinic Newcastle`}
+              className="w-full h-52 object-cover object-center"
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+            <div
+              className="absolute top-2 right-2 text-[0.55rem] uppercase tracking-luxury font-medium text-onyx-900 px-2.5 py-1"
+              style={{
+                background: 'linear-gradient(135deg, #FAE8E6 0%, #EEB8B2 100%)',
+                border: '1px solid rgba(185,112,88,0.30)',
+                boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,0.55)',
+              }}
+            >
+              After
+            </div>
+            <GoldBracket className="absolute top-1.5 right-1.5 w-5 h-5 pointer-events-none" rotate={90} />
+            <GoldBracket className="absolute bottom-1.5 right-1.5 w-5 h-5 pointer-events-none" rotate={180} />
+          </div>
+        </div>
+
+        {/* Caption */}
+        <div className="pt-4 px-1 flex items-baseline justify-between gap-4">
+          <h3
+            className="font-display font-light text-xl text-bone tracking-[-0.015em]"
+            style={{ fontVariationSettings: '"opsz" 60' }}
+          >
+            {treatment}
+          </h3>
+          <span className="font-italiana italic text-blush-300 text-sm whitespace-nowrap">
+            {note}
+          </span>
+        </div>
+        <div className="mt-2 px-1 h-px bg-gradient-to-r from-rosegold-400/30 via-blush-300/15 to-transparent" />
+      </div>
+    );
+  }
 
   return (
     <div className="group">

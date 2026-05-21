@@ -2,7 +2,7 @@ import Hero from '../components/Hero';
 import Treatments from '../components/Treatments';
 import About from '../components/About';
 import Results from '../components/Results';
-import CTABanner from '../components/CTABanner';
+
 import SEO from '../seo/SEO';
 import {
   organizationSchema,
@@ -30,7 +30,7 @@ export default function Home() {
       <Treatments />
       <Results />
       <About />
-      <CTABanner />
+      
     </>
   );
 }
