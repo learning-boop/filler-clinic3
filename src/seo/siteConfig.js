@@ -7,7 +7,7 @@
 export const SITE = {
   /* Brand ---------------------------------------------------------- */
   brand: 'Fillers Clinic',
-  legalName: 'Fillers Clinic',
+  legalName: 'Fillers Clinic in newcastle',
   tagline: 'Refined Aesthetic Medicine in Newcastle',
   defaultTitle:
     'Fillers Clinic Newcastle | Premium Lip, Cheek & Jawline Fillers',
@@ -59,7 +59,7 @@ export const SITE = {
   /* Practitioner --------------------------------------------------- */
   practitioner: {
     name: 'Dr Matla',
-    fullName: 'Dr Chandra Sekhar Matla',
+    fullName: 'Dr Matla',
     role: 'Aesthetic Doctor & Clinical Director',
     credentials: 'GMC-registered, CQC-regulated',
     image: 'https://fillers.skin/assets/doctor.webp',
@@ -73,14 +73,16 @@ export const SITE = {
 
   /* Social --------------------------------------------------------- */
   social: {
-    instagram: 'https://www.instagram.com/fillers.skin',
-    facebook: 'https://www.facebook.com/fillers.skin',
+    instagram: 'https://www.instagram.com/drmatlaclinic',
+    facebook: 'https://www.facebook.com/aestheticuk',
+   youtube:  'https://www.youtube.com/channel/UCMceyI4YQ7kBJIYGrgscHIA',
+   tiktok:   'https://www.tiktok.com/@drmatla'
   },
 
   /* Statistics / trust signals (used site-wide for consistency) ---- */
   trust: {
-    yearsExperience: '10+',
-    treatmentsDelivered: '5,000+',
+    yearsExperience: '9+',
+    treatmentsDelivered: '28,000+',
     satisfactionRate: '98%',
     reviewCount: '320',
     reviewRating: '4.9',
