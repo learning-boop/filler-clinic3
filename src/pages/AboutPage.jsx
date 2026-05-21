@@ -16,7 +16,7 @@ const accreditations = [
   'Aptos Thread Lift Trainer',
   'CQC Registered Clinic',
   'General Practitioner (MBBS, MRCGP, DFSRH)',
-  'Over 20 years experience in medicine',
+  'Over 9 years experience in medicine',
   'Registered with the General Medical Council',
   'Membership in Royal College of General Practice',
 ];
@@ -42,7 +42,7 @@ export default function AboutPage() {
     <>
       <SEO
         title="About Dr Matla — Aesthetic Doctor in Newcastle"
-        description="Meet Dr Matla — GMC-registered aesthetic doctor and clinical director of Fillers Clinic Newcastle. MBBS, MRCGP, DFSRH, with 20+ years in medicine and a refined approach to natural-looking enhancement."
+        description="Meet Dr Matla — GMC-registered aesthetic doctor and clinical director of Fillers Clinic Newcastle. MBBS, MRCGP, DFSRH, with 9+ years in medicine and a refined approach to natural-looking enhancement."
         keywords="Dr Matla, aesthetic doctor Newcastle, GMC registered Newcastle, CQC clinic Newcastle, MRCGP, MBBS, Aptos Thread Lift, dermal fillers Newcastle"
         canonical="/about"
         type="article"
