@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import {
   Instagram,
   Facebook,
-  Mail,
+ Mail,
   Phone,
   MapPin,
   Youtube,
@@ -15,58 +15,55 @@ import { SITE } from '../seo/siteConfig';
 export default function Footer() {
   return (
     <footer
-      className="relative overflow-hidden"
-      style={{ background: '#0E0606' }}
+      className="relative overflow-hidden -mt-1 border-t border-white/5"
+      style={{ background: '#0B0505' }}
     >
-      {/* Luxury mesh background */}
+
+      {/* Luxury background glow */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(at 18% 18%, rgba(150,72,70,0.20) 0px, transparent 55%), radial-gradient(at 82% 88%, rgba(185,112,88,0.15) 0px, transparent 55%)',
+            'radial-gradient(at 15% 15%, rgba(185,112,88,0.18) 0px, transparent 50%), radial-gradient(at 85% 85%, rgba(212,176,123,0.12) 0px, transparent 55%)',
         }}
       />
 
-      {/* Film grain */}
+      {/* Noise texture */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none"
+        className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none"
         style={{
           backgroundImage:
-            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
+            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='1'/></svg>\")",
         }}
       />
 
       <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 pt-20 pb-8">
 
         {/* MAIN GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 pb-16 border-b border-blush-300/15">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 border-b border-white/10 pb-16 items-start">
 
           {/* LEFT SIDE */}
           <div className="lg:col-span-5">
 
-            {/* Logo */}
+            {/* LOGO */}
             <Link to="/" className="flex items-center">
 
               <img
                 src={logo}
-                alt="Fillers Clinic Newcastle"
-                loading="lazy"
-                decoding="async"
-                width="80"
-                height="80"
+                alt="Fillers Clinic"
                 className="w-20 h-20 object-contain"
+                loading="lazy"
               />
 
-              {/* Brand text */}
               <div className="flex items-baseline -ml-5">
 
                 <span
                   className="text-[#FAF7F2]"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: '2.4rem',
+                    fontSize: '2.5rem',
                     fontWeight: '500',
                     letterSpacing: '-0.03em',
                     lineHeight: '1',
@@ -79,8 +76,7 @@ export default function Footer() {
                   className="text-[#D4B07B]"
                   style={{
                     fontFamily: "'Italiana', serif",
-                    fontSize: '2.2rem',
-                    letterSpacing: '-0.01em',
+                    fontSize: '2.3rem',
                     marginLeft: '2px',
                   }}
                 >
@@ -91,57 +87,36 @@ export default function Footer() {
 
             </Link>
 
-            {/* Description */}
-            <p className="mt-7 text-bone/65 max-w-sm font-light leading-[1.85]">
-              Expert aesthetic medicine, delivered with discretion from our
-              private Newcastle clinic.
+            {/* DESCRIPTION */}
+            <p className="mt-7 text-[#D8CEC6]/70 leading-[1.9] font-light max-w-md">
+              Luxury aesthetic treatments crafted to enhance natural beauty
+              with subtle refinement, elegance, and clinical precision.
             </p>
 
-            {/* Decorative divider */}
+            {/* DECORATIVE LINE */}
             <div className="mt-8 mb-8">
 
-              <svg
-                viewBox="0 0 200 12"
-                className="w-44 h-3"
-                fill="none"
-                aria-hidden
-              >
+              <svg viewBox="0 0 200 12" className="w-44 h-3" fill="none">
 
                 <path
                   d="M0 6 Q 25 0, 50 6 T 100 6 T 150 6 T 200 6"
-                  stroke="url(#footerGrad)"
-                  strokeWidth="0.6"
-                  strokeLinecap="round"
+                  stroke="url(#footerLine)"
+                  strokeWidth="0.7"
                 />
-
-                <circle cx="0" cy="6" r="1.5" fill="#B97058" />
-                <circle cx="200" cy="6" r="1.5" fill="#B97058" />
 
                 <defs>
                   <linearGradient
-                    id="footerGrad"
+                    id="footerLine"
                     x1="0"
                     y1="0"
                     x2="200"
                     y2="0"
                   >
-                    <stop
-                      offset="0"
-                      stopColor="#B97058"
-                      stopOpacity="0.0"
-                    />
+                    <stop offset="0" stopColor="#B97058" stopOpacity="0" />
 
-                    <stop
-                      offset="0.5"
-                      stopColor="#DBA38D"
-                      stopOpacity="0.9"
-                    />
+                    <stop offset="0.5" stopColor="#D4B07B" stopOpacity="1" />
 
-                    <stop
-                      offset="1"
-                      stopColor="#B97058"
-                      stopOpacity="0.0"
-                    />
+                    <stop offset="1" stopColor="#B97058" stopOpacity="0" />
                   </linearGradient>
                 </defs>
 
@@ -150,128 +125,96 @@ export default function Footer() {
             </div>
 
             {/* SOCIAL ICONS */}
-            <div className="flex items-center flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3">
 
               {[
                 {
                   icon: Instagram,
                   href: SITE.social.instagram,
                   label: 'Instagram',
-                  external: true,
                 },
                 {
                   icon: Facebook,
                   href: SITE.social.facebook,
                   label: 'Facebook',
-                  external: true,
                 },
                 {
                   icon: Youtube,
                   href: SITE.social.youtube,
                   label: 'YouTube',
-                  external: true,
                 },
                 {
                   icon: Music2,
                   href: SITE.social.tiktok,
                   label: 'TikTok',
-                  external: true,
                 },
-                {
-                  icon: Mail,
-                  href: `mailto:${SITE.email}`,
-                  label: 'Email',
-                },
-              ].map(({ icon: Icon, href, label, external }) => (
+              ].map(({ icon: Icon, href, label }) => (
 
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
-                  {...(external
-                    ? {
-                        target: '_blank',
-                        rel: 'noopener noreferrer',
-                      }
-                    : {})}
                   className="
                     w-12 h-12 rounded-full
-                    border border-blush-300/30
+                    border border-[#D4B07B]/20
                     flex items-center justify-center
-                    text-blush-300
-                    hover:bg-blush-400
-                    hover:text-onyx-900
-                    hover:border-blush-400
+                    text-[#D4B07B]
+                    hover:bg-[#D4B07B]
+                    hover:text-black
                     transition-all duration-500
                   "
                 >
-                  <Icon size={16} strokeWidth={1.5} />
+                  <Icon size={16} strokeWidth={1.6} />
                 </a>
 
               ))}
 
             </div>
 
-            {/* CONTACT INFO */}
-            <ul className="mt-8 space-y-3 text-sm text-bone/70 font-light">
+            {/* CONTACT */}
+            <ul className="mt-10 space-y-4 text-sm text-[#D8CEC6]/75 font-light">
 
-              {/* LOCATION */}
               <li className="flex items-start gap-3">
 
                 <MapPin
-                  size={14}
-                  className="mt-1 text-blush-300 shrink-0"
-                  strokeWidth={1.5}
+                  size={15}
+                  className="mt-1 text-[#D4B07B] shrink-0"
                 />
 
-                <span className="leading-relaxed">
+                <span>
                   Newcastle upon Tyne, United Kingdom
                 </span>
 
               </li>
 
-              {/* PHONE */}
               <li className="flex items-center gap-3">
 
                 <Phone
-                  size={14}
-                  className="text-blush-300 shrink-0"
-                  strokeWidth={1.5}
+                  size={15}
+                  className="text-[#D4B07B] shrink-0"
                 />
 
                 <a
                   href={`tel:${SITE.phoneRaw}`}
-                  className="
-                    py-2
-                    min-h-[40px]
-                    flex items-center
-                    hover:text-blush-300
-                    transition-colors
-                  "
+                  className="hover:text-[#D4B07B] transition-colors"
                 >
                   {SITE.phone}
                 </a>
 
               </li>
 
-              {/* EMAIL */}
               <li className="flex items-center gap-3">
 
                 <Mail
-                  size={14}
-                  className="text-blush-300 shrink-0"
-                  strokeWidth={1.5}
+                  size={15}
+                  className="text-[#D4B07B] shrink-0"
                 />
 
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="
-                    py-2
-                    min-h-[40px]
-                    flex items-center
-                    hover:text-blush-300
-                    transition-colors
-                  "
+                  className="hover:text-[#D4B07B] transition-colors"
                 >
                   {SITE.email}
                 </a>
@@ -283,21 +226,78 @@ export default function Footer() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-12">
-
-            {/* Treatments */}
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-10 pt-6 lg:pt-2">
+            {/* CONCERNS */}
             <div>
 
-              <h4 className="eyebrow-light mb-6">
+              <h4 className="text-[#D4B07B] uppercase tracking-[0.25em] text-xs mb-8 min-h-[20px]">
+                Concerns
+              </h4>
+
+              <ul className="space-y-5 text-[#F7F2EE]/85 font-light">
+
+                <li>
+                  <Link
+                    to="/concerns/thin-lips"
+                    className="hover:text-[#D4B07B] transition-colors"
+                  >
+                    Thin Lips
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/concerns/under-eye-hollows"
+                    className="hover:text-[#D4B07B] transition-colors"
+                  >
+                    Under-Eye Hollows
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/concerns/facial-volume-loss"
+                    className="hover:text-[#D4B07B] transition-colors"
+                  >
+                    Volume Loss
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/concerns/nasolabial-folds"
+                    className="hover:text-[#D4B07B] transition-colors"
+                  >
+                    Smile Lines
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/concerns/jawline-definition"
+                    className="hover:text-[#D4B07B] transition-colors"
+                  >
+                    Soft Jawline
+                  </Link>
+                </li>
+
+              </ul>
+
+            </div>
+
+            {/* TREATMENTS */}
+            <div>
+
+              <h4 className="text-[#D4B07B] uppercase tracking-[0.25em] text-xs mb-8 min-h-[20px]">
                 Treatments
               </h4>
 
-              <ul className="space-y-3.5 font-display font-light text-lg text-bone/85">
+              <ul className="space-y-5 text-[#F7F2EE]/85 font-light">
 
                 <li>
                   <Link
                     to="/treatments#lip-fillers"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
+                    className="hover:text-[#D4B07B] transition-colors"
                   >
                     Lip Enhancement
                   </Link>
@@ -306,7 +306,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/treatments#cheek-fillers"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
+                    className="hover:text-[#D4B07B] transition-colors"
                   >
                     Cheek Contouring
                   </Link>
@@ -315,7 +315,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/treatments#tear-trough-fillers"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
+                    className="hover:text-[#D4B07B] transition-colors"
                   >
                     Tear Trough
                   </Link>
@@ -324,7 +324,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/treatments#jawline-fillers"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
+                    className="hover:text-[#D4B07B] transition-colors"
                   >
                     Jawline Definition
                   </Link>
@@ -333,9 +333,9 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/treatments#profhilo"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
+                    className="hover:text-[#D4B07B] transition-colors"
                   >
-                    Profhilo Skin Renewal
+                    Profhilo
                   </Link>
                 </li>
 
@@ -343,19 +343,28 @@ export default function Footer() {
 
             </div>
 
-            {/* Experience */}
+            {/* CLINIC */}
             <div>
 
-              <h4 className="eyebrow-light mb-6">
-                Experience
+              <h4 className="text-[#D4B07B] uppercase tracking-[0.25em] text-xs mb-8 min-h-[20px]">
+                Clinic
               </h4>
 
-              <ul className="space-y-3.5 font-display font-light text-lg text-bone/85">
+              <ul className="space-y-5 text-[#F7F2EE]/85 font-light">
+
+                <li>
+                  <Link
+                    to="/about"
+                    className="hover:text-[#D4B07B] transition-colors"
+                  >
+                    About Dr. Matla
+                  </Link>
+                </li>
 
                 <li>
                   <Link
                     to="/results"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
+                    className="hover:text-[#D4B07B] transition-colors"
                   >
                     Before & After
                   </Link>
@@ -363,17 +372,8 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    to="/about"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
-                  >
-                    Meet Dr. Matla
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
                     to="/faq"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
+                    className="hover:text-[#D4B07B] transition-colors"
                   >
                     FAQ & Guides
                   </Link>
@@ -382,90 +382,47 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/contact"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
+                    className="hover:text-[#D4B07B] transition-colors"
                   >
-                    Consultation
+                    Contact
                   </Link>
-                </li>
-
-                <li>
-                  <a
-                    href={SITE.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block py-1 hover:text-blush-300 transition-colors duration-300"
-                  >
-                    Book Appointment
-                  </a>
                 </li>
 
               </ul>
 
             </div>
 
-            {/* Philosophy */}
-            <div>
-
-              <h4 className="eyebrow-light mb-6">
-                Our Philosophy
-              </h4>
-
-              <p className="text-bone/65 leading-[1.9] font-light text-sm max-w-xs">
-                Refined aesthetic treatments designed to enhance natural beauty
-                with elegance, balance, and discretion.
-              </p>
-
-              <div className="mt-6">
-
-                <Link
-                  to="https://portal.aestheticnursesoftware.com/book-online/1150"
-                  className="
-                    inline-flex items-center gap-2
-                    text-blush-300
-                    hover:text-blush-200
-                    transition-colors duration-300
-                    text-sm
-                    tracking-[0.2em]
-                    uppercase
-                  "
-                >
-                  Begin Your Journey
-                </Link>
-
-              </div>
-
-            </div>
 
           </div>
 
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
 
-          <p className="text-[0.72rem] text-bone/45 tracking-luxury uppercase font-light">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-[#D8CEC6]/40 font-light">
             © {new Date().getFullYear()} Fillers Clinic. All rights reserved.
           </p>
 
-          <div className="flex gap-8 text-[0.72rem] text-bone/45 tracking-luxury uppercase font-light">
+          <div className="flex flex-wrap gap-8 text-[11px] uppercase tracking-[0.2em] text-[#D8CEC6]/40 font-light">
 
             <a
               href="#"
-              className="hover:text-blush-300 transition-colors duration-300"
+              className="hover:text-[#D4B07B] transition-colors"
             >
-              Privacy
+              Privacy Policy
             </a>
 
             <a
               href="#"
-              className="hover:text-blush-300 transition-colors duration-300"
+              className="hover:text-[#D4B07B] transition-colors"
             >
-              Terms
+              Terms & Conditions
             </a>
 
             <a
               href="#"
-              className="hover:text-blush-300 transition-colors duration-300"
+              className="hover:text-[#D4B07B] transition-colors"
             >
               CQC Regulated
             </a>

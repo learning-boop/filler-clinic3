@@ -115,7 +115,7 @@ export default function Treatments() {
 </p>
 
         {/* Cross-links: concerns + locations */}
-        <div className="mt-20 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* <div className="mt-20 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="border border-blush-300/30 p-7 bg-bone/60">
             <span className="eyebrow text-rosegold-700">By Concern</span>
             <ul className="mt-5 space-y-2 font-display text-lg">
@@ -134,7 +134,7 @@ export default function Treatments() {
               <li><Link to="/locations/tear-trough-fillers-gateshead" className="block py-2 min-h-[40px] text-onyx/80 hover:text-rosegold-700 transition-colors">Tear trough Gateshead</Link></li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
         {/* CTA below */}
         <motion.div
