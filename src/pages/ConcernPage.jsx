@@ -10,6 +10,7 @@ import {
   medicalConditionSchema,
 } from '../seo/schemas';
 import { concernBySlug } from '../data/concerns';
+import { treatmentsDisclaimer } from '../data/treatments';
 
 export default function ConcernPage() {
   const { slug } = useParams();
@@ -50,6 +51,7 @@ export default function ConcernPage() {
         accent={data.h1.split(' ').slice(-2).join(' ')}
         subtitle={data.intro[0]}
         image={data.image}
+        imageDisclaimer={treatmentsDisclaimer}
       />
 
       {/* Intro continued */}

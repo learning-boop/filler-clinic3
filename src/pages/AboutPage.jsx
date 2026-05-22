@@ -3,6 +3,8 @@ import About from '../components/About';
 import CTABanner from '../components/CTABanner';
 import { motion } from 'framer-motion';
 import SEO from '../seo/SEO';
+import Reviews from '../components/Reviews';
+
 import { physicianSchema, breadcrumbSchema } from '../seo/schemas';
 
 const stats = [
@@ -250,6 +252,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <Reviews />
 
       {/* <CTABanner /> */}
     </>

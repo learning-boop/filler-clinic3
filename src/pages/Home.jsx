@@ -2,6 +2,8 @@ import Hero from '../components/Hero';
 import Treatments from '../components/Treatments';
 import About from '../components/About';
 import Results from '../components/Results';
+import Reviews from '../components/Reviews';
+import CTABanner from '../components/CTABanner';
 
 import SEO from '../seo/SEO';
 import {
@@ -9,7 +11,9 @@ import {
   physicianSchema,
   websiteSchema,
   breadcrumbSchema,
+  reviewSchema,
 } from '../seo/schemas';
+import { reviews } from '../data/reviews';
 
 export default function Home() {
   return (
@@ -24,12 +28,17 @@ export default function Home() {
           physicianSchema(),
           websiteSchema(),
           breadcrumbSchema([{ name: 'Home', path: '/' }]),
+          ...reviewSchema(reviews),
         ]}
       />
       <Hero />
+      
       <Treatments />
-      <Results />
       <About />
+      <Results />
+      {/* <Reviews /> */}
+      <CTABanner />
+      
       
     </>
   );

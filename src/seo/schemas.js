@@ -183,3 +183,20 @@ export const articleSchema = ({
   dateModified: dateModified || '2026-05-01',
   mainEntityOfPage: { '@type': 'WebPage', '@id': absUrl(path) },
 });
+
+/* ------------------------------------------------------------------ */
+/*  REVIEW SCHEMA                                                       */
+/* ------------------------------------------------------------------ */
+export const reviewSchema = (reviews) =>
+  reviews.map((r) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    author: { '@type': 'Person', name: r.author },
+    reviewBody: r.body,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: r.rating,
+      bestRating: 5,
+    },
+    itemReviewed: { '@id': `${SITE.url}/#organization` },
+  }));

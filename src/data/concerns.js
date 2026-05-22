@@ -7,7 +7,7 @@ export const concerns = [
     slug: 'thin-lips',
     title: 'Thin Lips',
     h1: 'Treatment for Thin Lips',
-    image: '/assets/lips24.webp',
+    image: '/assets/thin-lips.webp',
     metaTitle: 'Thin Lips Treatment Newcastle | Natural Lip Enhancement by Dr. Matla',
     metaDescription:
       'Treatment for thin lips at Fillers Clinic Newcastle. Refined, natural lip enhancement by Dr. Matla. Conservative volume, anatomical placement, by appointment only.',
@@ -69,7 +69,7 @@ export const concerns = [
     slug: 'under-eye-hollows',
     title: 'Under-Eye Hollows',
     h1: 'Treatment for Under-Eye Hollows',
-    image: '/assets/tt7.webp',
+    image: '/assets/under-eye.webp',
     metaTitle: 'Under-Eye Hollows Treatment Newcastle | Tear Trough by Dr. Matla',
     metaDescription:
       'Treatment for under-eye hollows and dark circles at Fillers Clinic Newcastle. Tear trough rejuvenation by Dr. Matla using safe micro-cannula technique. By appointment.',
@@ -132,7 +132,7 @@ export const concerns = [
     slug: 'facial-volume-loss',
     title: 'Facial Volume Loss',
     h1: 'Treatment for Age-Related Facial Volume Loss',
-    image: '/assets/cheek.webp',
+    image: '/assets/face-vol.webp',
     metaTitle: 'Facial Volume Loss Treatment Newcastle | Restorative Filler by Dr. Matla',
     metaDescription:
       'Restore lost facial volume at Fillers Clinic Newcastle. Comprehensive treatment plans by Dr. Matla for mid-face volume loss, temple hollowing and jawline definition. By appointment.',
@@ -196,7 +196,7 @@ export const concerns = [
     slug: 'nasolabial-folds',
     title: 'Nasolabial Folds',
     h1: 'Treatment for Nasolabial Folds',
-    image: '/assets/cheek.webp',
+    image: '/assets/smile.webp',
     metaTitle: 'Nasolabial Folds Treatment Newcastle | Smile Line Filler by Dr. Matla',
     metaDescription:
       'Soften nasolabial folds (smile lines) at Fillers Clinic Newcastle. Strategic mid-face restoration by Dr. Matla — treats the cause, not just the line. By appointment.',
@@ -259,7 +259,7 @@ export const concerns = [
     slug: 'jawline-definition',
     title: 'Jawline Definition',
     h1: 'Treatment for Lack of Jawline Definition',
-    image: '/assets/jaw4.webp',
+    image: '/assets/jaw-line.webp',
     metaTitle: 'Jawline Definition Treatment Newcastle | Non-Surgical Jaw by Dr. Matla',
     metaDescription:
       'Restore jawline definition non-surgically at Fillers Clinic Newcastle. Dr. Matla sculpts the lower face with structural HA filler — refined results, by appointment.',

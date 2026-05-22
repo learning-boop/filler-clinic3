@@ -1,13 +1,12 @@
 /* ------------------------------------------------------------------
  *  CENTRAL SITE / SEO CONFIGURATION
  *  Single source of truth for brand, contact, location and schema.
- *  Edit values here once and they propagate site-wide.
  * ------------------------------------------------------------------ */
 
 export const SITE = {
   /* Brand ---------------------------------------------------------- */
   brand: 'Fillers Clinic',
-  legalName: 'Fillers Clinic in newcastle',
+  legalName: 'Fillers Clinic',
   tagline: 'Refined Aesthetic Medicine in Newcastle',
   defaultTitle:
     'Fillers Clinic Newcastle | Premium Lip, Cheek & Jawline Fillers',
@@ -19,20 +18,18 @@ export const SITE = {
   /* Domain & URLs -------------------------------------------------- */
   url: 'https://fillers.skin',
   ogImage: 'https://fillers.skin/assets/og-image.webp',
-  twitterHandle: '@fillersskin',
+  twitterHandle: '@drmatlaclinic',
 
   /* Contact -------------------------------------------------------- */
   email: 'hello@fillers.skin',
   phone: '0333 444 1399',
-  phoneRaw: '0333 444 1399',
+  phoneRaw: '+443334441399',
   bookingUrl: 'https://portal.aestheticnursesoftware.com/book-online/1150',
 
   /* Location ------------------------------------------------------- */
   address: {
-    streetAddress: 'Newcastle upon Tyne City Centre',
     addressLocality: 'Newcastle upon Tyne',
     addressRegion: 'Tyne and Wear',
-    postalCode: 'NE1',
     addressCountry: 'GB',
   },
   geo: {
@@ -61,8 +58,8 @@ export const SITE = {
     name: 'Dr Matla',
     fullName: 'Dr Matla',
     role: 'Aesthetic Doctor & Clinical Director',
-    credentials: 'GMC-registered, CQC-regulated',
-    image: 'https://fillers.skin/assets/doctor.webp',
+    credentials: 'GMC-registered, MBBS, MRCGP, DFSRH',
+    image: 'https://drmatla.com/wp-content/uploads/2023/10/Dr-Matla.jpg',
   },
 
   /* Opening Hours -------------------------------------------------- */
@@ -74,23 +71,21 @@ export const SITE = {
   /* Social --------------------------------------------------------- */
   social: {
     instagram: 'https://www.instagram.com/drmatlaclinic',
-    facebook: 'https://www.facebook.com/aestheticuk',
-   youtube:  'https://www.youtube.com/channel/UCMceyI4YQ7kBJIYGrgscHIA',
-   tiktok:   'https://www.tiktok.com/@drmatla'
+    facebook:  'https://www.facebook.com/aestheticuk',
+    youtube:   'https://www.youtube.com/channel/UCMceyI4YQ7kBJIYGrgscHIA',
+    tiktok:    'https://www.tiktok.com/@drmatla',
   },
 
-  /* Statistics / trust signals (used site-wide for consistency) ---- */
+  /* Trust signals (only use REAL, verifiable numbers) --------------- */
   trust: {
-    yearsExperience: '9+',
-    treatmentsDelivered: '28,000+',
+    yearsExperience: '20+',
+    treatmentsDelivered: '5,000+',
     satisfactionRate: '98%',
-    reviewCount: '320',
-    reviewRating: '4.9',
+    reviewRating: '5.0',
+    reviewCount: '7',
   },
 };
 
-/* ------------------------------------------------------------------ */
-/*  HELPERS                                                           */
 /* ------------------------------------------------------------------ */
 export const absUrl = (path = '') => {
   if (!path) return SITE.url;

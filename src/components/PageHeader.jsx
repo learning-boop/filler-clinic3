@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function PageHeader({ eyebrow, title, accent, subtitle, image }) {
+export default function PageHeader({ eyebrow, title, accent, subtitle, image, imageDisclaimer }) {
   return (
     <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-bone">
       {/* Soft blush mesh */}
@@ -83,6 +83,11 @@ export default function PageHeader({ eyebrow, title, accent, subtitle, image }) 
                 }}
               />
             </div>
+            {imageDisclaimer && (
+              <p className="mt-3 text-[0.68rem] text-onyx/35 font-light italic leading-relaxed tracking-wide">
+                {imageDisclaimer}
+              </p>
+            )}
           </motion.div>
         )}
       </div>
